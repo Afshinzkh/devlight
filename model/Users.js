@@ -20,6 +20,9 @@ userSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: Date.now
+  },
+  id: {
+    type: String
   }
 });
 
