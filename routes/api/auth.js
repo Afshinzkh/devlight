@@ -9,7 +9,7 @@ const User = require('../../model/Users');
 router.get('/user', auth, async (req, res) => {
   try {
     const user = await User.findOne({ id: req.user.id }).select(
-      '-password, -_id'
+      '-password -_id -__v'
     );
     res.json({ user });
   } catch (error) {
