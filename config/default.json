@@ -1,0 +1,3 @@
+{
+  "mongoURI": "mongodb+srv://afshin:afshin@devlight-kctlw.mongodb.net/test?retryWrites=true&w=majority"
+}
