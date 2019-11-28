@@ -103,4 +103,18 @@ router.get('/', async (req, res) => {
   }
 });
 
+// @route   Delete /profiles/me
+// @desc    delete profile and user.
+// @access  Public
+router.delete('/me', auth, async (req, res) => {
+  try {
+    await Profile.findOneAndRemove({ userid: req.user.id });
+    await User.findOneAndRemove({ id: req.user.id });
+    res.json('Successfully removed');
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json('Internal Server Error /Profiles.');
+  }
+});
+
 module.exports = router;
