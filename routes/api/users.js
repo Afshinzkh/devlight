@@ -6,7 +6,7 @@ const config = require('config');
 const uuidv4 = require('uuid/v1');
 const jwt = require('jsonwebtoken');
 const { check, validationResult } = require('express-validator');
-const User = require('../../model/Users');
+const User = require('../../model/User');
 
 // @route   POST /users
 // @desc    Register user
