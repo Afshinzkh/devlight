@@ -1,4 +1,4 @@
-### A social network for developers
+# A social network for developers
 
 This is a webApp based on MERN stack,
 used for learning the MERN stack.
